@@ -3,10 +3,7 @@
     "builds": [
         {
             "src": "app.py",
-            "use": "@vercel/python",
-            "config": {
-                "installCommand": "apt-get update && apt-get install -y default-libmysqlclient-dev"
-            }
+            "use": "@vercel/python"
         }
     ],
     "routes": [
