@@ -7,10 +7,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-# Required for Vercel
+# Required for Vercel (Lambda handler)
 def handler(event, context):
-    return app(event, context)
+    return app
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 3000))  # Default to 5000, but use Vercel's port if available
+    port = int(os.environ.get("PORT", 3000))  # Vercel uses 3000
     app.run(host="0.0.0.0", port=port)
