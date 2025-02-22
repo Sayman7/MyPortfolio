@@ -1,10 +1,14 @@
 from flask import Flask, render_template
 
-app = Flask(__name__, template_folder="templates")  # Ensure templates folder is set
+app = Flask(__name__, template_folder="templates")  # Ensure the templates folder is used
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
-if __name__ == '__main__':
+# The app is exposed as a Vercel handler
+def handler(event, context):
+    return app(event, context)
+
+if __name__ == "__main__":
     app.run()
