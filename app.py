@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import os
 
 app = Flask(__name__)
 
@@ -11,4 +12,5 @@ def handler(event, context):
     return app(event, context)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 3000))  # Default to 5000, but use Vercel's port if available
+    app.run(host="0.0.0.0", port=port)
