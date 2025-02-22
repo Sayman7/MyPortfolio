@@ -1,7 +1,7 @@
 Flask==2.2.5
 Werkzeug==2.2.3
 gunicorn
-mysqlclient==2.2.7
+pymysql  # Replace mysqlclient
 blinker==1.9.0
 click==8.1.8
 itsdangerous==2.2.0
