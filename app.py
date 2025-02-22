@@ -10,8 +10,9 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-# Required for Vercel (Lambda handler)
 def handler(event, context):
+    from werkzeug.middleware.proxy_fix import ProxyFix
+    app.wsgi_app = ProxyFix(app.wsgi_app)
     return app
 
 if __name__ == "__main__":
