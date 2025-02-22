@@ -1,0 +1,597 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Navbar Styling */
+.navbar {
+    position: fixed;  /* Fixes it at the top */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 5vh; /* Adjust height */
+    background: rgba(0, 0, 0, 0.9); /* Slight transparency */
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 1000; /* Ensures it's above everything */
+    box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.2); /* Subtle green glow */
+}
+
+/* Navbar Logo */
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-right: 75rem;
+    color: #00FF00; /* Neon Green */
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+}
+
+/* Navbar Links */
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    font-family: 'Courier New', monospace;
+}
+
+/* Hover Effect */
+.navbar .nav-links a:hover {
+    color: #00FF00;
+    text-shadow: 0 0 10px #00FF00;
+}
+
+/* Responsive Navbar (Optional for Small Screens) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.first-page {
+    background-color: #000000;
+    color: #00FF00;
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.vertical-line {
+    width: 3px; /* Adjust thickness */
+    height: 44vh; /* Adjust height */
+    background-color: white; /* Base color */
+    position: absolute;
+    left: 0; /* Start from the left */
+    top: 24vh; /* Position from the top */
+    
+    /* Initial no glow */
+    box-shadow: none;
+
+    /* Move from left to right first, then glow infinitely */
+    animation: moveRight 0.8s ease-in-out forwards, glow 1s infinite alternate 1s;
+}
+
+/* Move the line from left to right */
+@keyframes moveRight {
+    0% {
+        left: 0; /* Start from left */
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        left: 10rem; /* End at final position */
+        opacity: 1;
+    }
+}
+
+/* Glowing Animation (starts after moveRight completes) */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgb(173, 226, 245), 0 0 10px rgb(135, 246, 246), 0 0 15px rgb(66, 241, 241);
+    }
+    100% {
+        box-shadow: 0 0 15px white, 0 0 20px cyan, 0 0 30px rgb(9, 255, 255);
+    }
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    padding-left: 20px; /* Add slight left padding */
+}
+
+p {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Typing animation */
+@keyframes typing1 {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes typing2 {
+    0%, 33% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes typing3 {
+    0%, 66% { width: 0; }
+    100% { width: 100%; }
+}
+
+/* Apply animations to each line */
+
+@keyframes bounceDrop {
+    0% { transform: translateY(-50px); opacity: 0; }
+    50% { transform: translateY(10px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.line1 {
+    position: relative;
+    color: azure;
+    top: 16rem;
+    left: 11.5rem;
+    font-size: 4rem;
+    width: 0;
+    display: inline-block;
+    animation: typing1 1s steps(30, end) forwards, blink 0.7s infinite;
+}
+
+.letter_spacing{
+    letter-spacing: -1.28rem; /* Reduces spacing between letters */
+}
+
+/* Applying the bounce animation to each letter */
+.line1 span {
+    display: inline-block;
+    opacity: 0;
+    animation: bounceDrop 0.5s ease-out forwards;
+}
+
+/* Delay each letter to make a sequential effect */
+.line1 span:nth-child(1) { animation-delay: 0.1s; }
+.line1 span:nth-child(2) { animation-delay: 0.2s; }
+.line1 span:nth-child(3) { animation-delay: 0.3s; }
+.line1 span:nth-child(4) { animation-delay: 0.4s; }
+.line1 span:nth-child(5) { animation-delay: 0.5s; }
+
+
+.line2 {
+    position: relative;
+    width: 0;
+    top: 16rem;
+    left: 13.5rem;
+    animation: typing2 1.5s steps(30, end) forwards 0.7s, blink 0.5s infinite 1s;
+}
+
+.line3 {
+    position: relative;
+    width: 0;
+    color: rgb(242, 74, 83);
+    top: 16rem;
+    left: 15.5rem;
+    animation: typing3 1s steps(30, end) forwards 1s, blink 0.5s infinite 6s;
+}
+
+.line4 {
+    position: relative;
+    width: 0;
+    color: rgb(242, 74, 83);
+    top: 16rem;
+    left: 15.5rem;
+    animation: typing3 0.7s steps(30, end) forwards 1.5s, blink 0.5s infinite 6s;
+}
+
+.line5 {
+    position: relative;
+    width: 0;
+    top: 16rem;
+    left: 13.5rem;
+    animation: typing2 1.5s steps(30, end) forwards 0.7s, blink 0.5s infinite 1s;
+}
+
+.profile_photo {
+    position: absolute;
+    top: 13.8rem;
+    left: 84rem;
+    width: 300px;
+    height: 360px;
+    background-color: whitesmoke;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    place-content: center;
+    place-items: center;
+    z-index: 1;
+    font-size: 20px;
+}
+
+/* Rotating Border */
+.profile_photo::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background-image: linear-gradient(190deg, black, black);
+    border-radius: 20px;
+    animation: rotating 3s linear infinite;
+}
+
+/* Fix the rotation animation */
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Inner container to keep profile background */
+.profile_photo::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    inset: 5px;
+    border-radius: 15px;
+}
+
+@keyframes blur{
+from{
+    opacity: 0;
+}
+to{
+    opacity: 1;
+}
+}
+
+img{
+    z-index: 2;
+    animation: blur 1s linear;
+}
+
+/* About Section Styling */
+.second-page {
+    display: flex;
+    margin: 0;
+    background-color: black;
+    font-size: 36px;
+    color: white;
+    height: 100vh;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-evenly; /* Space between the left and right sections */
+    padding: 2rem; /* Add some padding to prevent the content from touching the edges */
+}
+
+.left-column {
+    position: relative;
+    top: 3rem;
+    width: 40%; /* Left column (description) takes 40% of the width */
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column; /* Stack projects and experiences vertically */
+    width: 60%; /* Right column (projects + experiences) takes 55% of the width */
+}
+
+/* Description Box Styling */
+.desc {
+    width: 100%; /* Full width of the left column */
+    height: 45rem;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+    border: 3px solid rgba(0, 255, 0, 0.7); /* Neon Green Border */
+    border-radius: 30px;
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.8); /* Outer Glow */
+    color: #fdfffd; /* Hacker Green Text */
+    font-family: 'Courier New', monospace;
+    display: block;
+    text-align: left;
+    backdrop-filter: blur(5px); /* Slight Glass Effect */
+    padding: 2rem;
+}
+
+/* Projects and Experiences Box Styling */
+.projects, .experiences {
+    position: relative;
+    top: 3rem;
+    left: 14rem;
+    width: 45rem; /* Full width of the right column */
+    margin-bottom: 3rem; /* Space between the projects and experiences box */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+    border: 3px solid rgba(0, 255, 0, 0.7); /* Neon Green Border */
+    border-radius: 30px;
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.8); /* Outer Glow */
+    color: #fdfffd; /* Hacker Green Text */
+    font-family: 'Courier New', monospace;
+    display: block;
+    text-align: left;
+    backdrop-filter: blur(5px); /* Slight Glass Effect */
+    padding: 1rem;
+}
+
+/* Content Inside Description Box */
+.content {
+    position: relative;
+    top: -1.5rem;
+}
+
+.title {
+    position: relative;
+    font-size: 1rem;
+    left: 1rem;
+}
+
+/* Subtitle Styling */
+.subtitle {
+    position: relative;
+    font-size: 0.85rem;
+    left: 2.52rem;
+}
+
+/* Section Titles (e.g., Description, Projects, Experiences) */
+h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+/* Glowing Effect for Horizontal Lines */
+@keyframes glowing {
+    0% { box-shadow: 0 0 5px white; }
+    100% { box-shadow: 0 0 15px white; }
+}
+
+/* Sharp Horizontal Line Styling */
+.sharp-horizontal-line, .sharp-horizontal-line2 {
+    width: 16.5rem;
+    height: 3px; /* Adjust thickness */
+    background-color: white; /* White color */
+    position: relative;
+    margin: 1rem auto;
+    animation: glowing 1s infinite alternate;
+}
+
+/* Variation for the Second Horizontal Line */
+.sharp-horizontal-line2 {
+    width: 15rem; /* Slightly smaller width for variation */
+}
+
+/* Skills Section Styling */
+h3 {
+    position: relative;
+    left: 1rem;
+    font-size: 2rem;
+}
+
+.skills {
+    position: relative;
+    top: -1.5rem;
+}
+
+/* Styling for Links */
+a {
+    color: #fbf9f9; /* Default color */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+a:hover {
+    color: #00FF00; /* Hover color */
+    text-shadow: 0 0 5px #00FF00; /* Subtle glow */
+}
+
+/* Project Logos Styling */
+.prologo {
+    position: relative;
+    height: 6.5rem;
+    width: 6.5rem;
+    border-radius: 5rem;
+    padding: 4rem;
+}
+
+a {
+    color: #fbf9f9; /* Green */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+a:hover {
+    color: #00FF00; /* Red */
+    text-shadow: 0 0 5px #00FF00; /* Subtle glow */
+}
+
+.prologo{
+    position: relative;
+    height: 6.5rem;
+    width: 6.5rem;
+    border-radius: 5rem;
+    padding: 4rem;
+}
+
+h4{
+    position: relative;
+    color: red;
+    top: -2.75rem;
+    left: 2.4rem;
+    font-size: 1.2rem;
+}
+
+/* Default Span Styling */
+span {
+    position: relative;
+    color: #fbf9f9; /* Default color */
+    transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hover Effect for Span - Show Box */
+span:hover::after {
+    content: ""; /* Create a pseudo-element for the box */
+    position: absolute;
+    bottom: -4rem; /* Position the box slightly below the span */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust the thickness of the box */
+    background-color: rgba(0, 255, 0, 0.7); /* Neon Green Color */
+    border-radius: 4px; /* Optional: Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8); /* Glow effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Optional: On Hover, Change the Span Color */
+span:hover {
+    color: #bbb4b5; /* Change color on hover */
+    text-shadow: 4px 2px 5px #00FF00; /* Subtle glow */
+}
+
+
+/* Adjusting for the Prologo when hover happens */
+.prologo:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Card Styling for Other Sections */
+.third-page{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.third-head{
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 55rem;
+    height: 36rem;
+    top: 7rem;
+    left: -14rem;
+    align-items: center;
+    background-color: #0a0f10; /* Dark background */
+    color: #00ff00; /* Hacker green text */
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7); /* Green glow shadow */
+    border-radius: 2rem;
+    border: 2px solid #00ff00; /* Hacker-style green border */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for that hacker feel */
+    padding: 2rem;
+}
+
+
+.card:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 0, 1); /* Stronger glow on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+
+/* === Hacker Arrow Styling === */
+.arrow {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.arrow-left::before,
+.arrow-right::before {
+    content: "◀";
+    color: #00ff00;
+    text-shadow: 0 0 15px #00ff00, 0 0 25px #00ff00;
+    font-size: 4rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.arrow-right::before {
+    content: "▶";
+}
+
+/* === Glitch Effect on Hover === */
+.arrow:hover {
+    transform: scale(1.3) rotate(2deg);
+    animation: glitch 0.3s infinite alternate;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: -2px -2px 5px rgba(0, 255, 0, 0.8),
+                     2px 2px 5px rgba(0, 255, 0, 0.5);
+        transform: scale(1.3) rotate(-2deg);
+    }
+    100% {
+        text-shadow: 2px 2px 5px rgba(0, 255, 0, 0.8),
+                     -2px -2px 5px rgba(0, 255, 0, 0.5);
+        transform: scale(1.3) rotate(2deg);
+    }
+}
+
+/* Flickering Effect */
+@keyframes flicker {
+    0%, 100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+    50% {
+        opacity: 0.7;
+        filter: brightness(1.5);
+    }
+}
+
+.arrow-left, .arrow-right {
+    animation: flicker 1s infinite alternate ease-in-out;
+}
+
+.arrow-left{
+    position: relative;
+    top: 29.5rem;
+    left: -5.7rem;
+}
+
+.arrow-right{
+    position: relative;
+    top: -10.1rem;
+    left: 54.4rem;
+}
+
+.fourth-page{
+    height: 100vh;
+    background-color: rgb(74, 184, 60);
+}
+.heading3{
+    position: relative;
+    color: #fdfffd;
+    top: 5rem;
+    font-size: 3rem;
+}
