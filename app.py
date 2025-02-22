@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-# Vercel needs this for proper handling
+# Required for Vercel
 def handler(event, context):
     return app(event, context)
 
