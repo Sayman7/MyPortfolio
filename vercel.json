@@ -1,19 +1,5 @@
 {
     "version": 2,
-    "routes": [
-      {
-        "src": "/sitemap.xml",
-        "dest": "/sitemap.xml"
-      },
-      {
-        "src": "/robots.txt",
-        "dest": "/robots.txt"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/$1"
-      }
-    ],
     "env": {
       "NODE_ENV": "production"
     }
