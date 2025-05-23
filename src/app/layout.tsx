@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "GtDRX3ONvRXYgr6Gxfgy4zf1Cml79WpXWbHNIvIoTwE", // ✅ Moved here
+  },
   openGraph: {
     title: "Sayman Lal",
     description: "Author | Developer | Entrepreneur",
