@@ -38,32 +38,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  other: {
-    // Custom JSON-LD Schema added here
-    "ld+json": JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Sayman Lal",
-      "url": "https://sayman-lal.vercel.app",
-      "image": "https://sayman-lal.vercel.app/Sayman-Lal.jpg",
-      "jobTitle": "President",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "AIALCHEMIST",
-      },
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "Gyan Ganga Institute of Technology and Sciences (GGITS), Batch AIML2028",
-      },
-      "description":
-        "CodeChemist & Hackathon Winner x1 👾 | Author | Developer | Entrepreneur. Always exploring, always creating.",
-      "sameAs": [
-        "https://www.instagram.com/sayman._.here/",
-        "https://www.linkedin.com/in/sayman-lal-30ba65306/",
-        "https://github.com/Sayman7",
-      ],
-    }),
-  },
 };
 
 export default function RootLayout({
@@ -73,6 +47,48 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "@id": "https://sayman-lal.vercel.app/#person",
+              "name": "Sayman Lal",
+              "url": "https://sayman-lal.vercel.app",
+              "image": "https://sayman-lal.vercel.app/Sayman-Lal.jpg",
+              "jobTitle": "President",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "AIALCHEMIST",
+              },
+              "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "Gyan Ganga Institute of Technology and Sciences (GGITS), Batch AIML2028",
+              },
+              "description":
+                "CodeChemist & Hackathon Winner x1 👾 | Author | Developer | Entrepreneur. Always exploring, always creating.",
+              "sameAs": [
+                "https://www.instagram.com/sayman._.here/",
+                "https://www.linkedin.com/in/sayman-lal-30ba65306/",
+                "https://github.com/Sayman7",
+              ],
+              "birthPlace": {
+                "@type": "Place",
+                "name": "Jabalpur, Madhya Pradesh, India - 482001"
+              },
+              "knowsAbout": [
+                "Web Development",
+                "Hackathons",
+                "Startup Innovation",
+                "AI, Machine Learning, Web3, Blockchain, MERN Stack, AWS Cloud",
+                "Book & Article Writing"
+              ]
+            }),
+          }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
