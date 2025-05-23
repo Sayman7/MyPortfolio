@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { MotionValue, motion, useScroll, useTransform } from "motion/react";
+import React, { useEffect, useRef, useState } from "react";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import DellLogo from "@/components/DellLogo";
 import { cn } from "@/lib/utils";
 import {
@@ -18,12 +18,12 @@ import {
   IconVolume,
   IconVolume2,
   IconVolume3,
+  IconSearch,
+  IconWorld,
+  IconCommand,
+  IconCaretLeftFilled,
+  IconCaretDownFilled,
 } from "@tabler/icons-react";
-import { IconSearch } from "@tabler/icons-react";
-import { IconWorld } from "@tabler/icons-react";
-import { IconCommand } from "@tabler/icons-react";
-import { IconCaretLeftFilled } from "@tabler/icons-react";
-import { IconCaretDownFilled } from "@tabler/icons-react";
 
 
 export const MacbookScroll = ({
@@ -125,7 +125,6 @@ export const Lid = ({
   scaleY,
   rotate,
   translate,
-  src,
 }: {
   scaleX: MotionValue<number>;
   scaleY: MotionValue<number>;
