@@ -13,15 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sayman Lal - Portfolio",
+  title: "Sayman Lal | Portfolio",
   description:
-    "Sayman Lal, CodeChemist & Hackathon Winner x 1 👾 Developer | Author | Entrepreneur. Full Stack Developer at AIALCHEMIST. GGITS AIML’28. Always exploring, always creating.",
+    "Sayman Lal, CodeChemist & Hackathon Winner x 1  Developer | Author | Entrepreneur. Full Stack Developer at AIALCHEMIST. GGITS AIML’28. Always exploring, always creating.",
   metadataBase: new URL("https://sayman-lal.vercel.app"),
   alternates: {
     canonical: "/",
   },
   verification: {
-    google: "GtDRX3ONvRXYgr6Gxfgy4zf1Cml79WpXWbHNIvIoTwE", // ✅ Moved here
+    google: "GtDRX3ONvRXYgr6Gxfgy4zf1Cml79WpXWbHNIvIoTwE",
   },
   openGraph: {
     title: "Sayman Lal",
@@ -71,7 +71,7 @@ export default function RootLayout({
                 "name": "Gyan Ganga Institute of Technology and Sciences (GGITS), Batch AIML2028",
               },
               "description":
-                "CodeChemist & Hackathon Winner x1 👾 | Author | Developer | Entrepreneur. Always exploring, always creating.",
+                "CodeChemist & Hackathon Winner x1 | Author | Developer | Entrepreneur. Always exploring, always creating.",
               "sameAs": [
                 "https://www.instagram.com/sayman._.here/",
                 "https://www.linkedin.com/in/sayman-lal-30ba65306/",
