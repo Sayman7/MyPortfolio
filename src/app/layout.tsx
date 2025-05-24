@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Sayman Lal | Portfolio",
   description:
-    "Sayman Lal, CodeChemist & Hackathon Winner x 1  Developer | Author | Entrepreneur. Full Stack Developer at AIALCHEMIST. GGITS AIML’28. Always exploring, always creating.",
-  metadataBase: new URL("https://sayman-lal.vercel.app"),
+    "Sayman Lal, CodeChemist & Hackathon Winner x 1  Developer | Author | Entrepreneur Always exploring, always creating",
+  metadataBase: new URL("https://worksofsayman.vercel.app"),
   alternates: {
     canonical: "/",
   },
@@ -26,11 +26,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sayman Lal",
     description: "Author | Developer | Entrepreneur",
-    url: "https://sayman-lal.vercel.app",
+    url: "https://worksofsayman.vercel.app",
     type: "website",
     images: [
       {
-        url: "https://sayman-lal.vercel.app/Sayman-Lal.jpg",
+        url: "https://worksofsayman.vercel.app/Sayman-Lal.jpg",
         width: 1200,
         height: 630,
         alt: "Sayman Lal",
@@ -57,10 +57,10 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "@id": "https://sayman-lal.vercel.app/#person",
+              "@id": "https://worksofsayman.vercel.app/#person",
               "name": "Sayman Lal",
-              "url": "https://sayman-lal.vercel.app",
-              "image": "https://sayman-lal.vercel.app/Sayman-Lal.jpg",
+              "url": "https://worksofsayman.vercel.app",
+              "image": "https://worksofsayman.vercel.app/Sayman-Lal.jpg",
               "jobTitle": "President",
               "worksFor": {
                 "@type": "Organization",
@@ -71,11 +71,11 @@ export default function RootLayout({
                 "name": "Gyan Ganga Institute of Technology and Sciences (GGITS), Batch AIML2028",
               },
               "description":
-                "CodeChemist & Hackathon Winner x1 | Author | Developer | Entrepreneur. Always exploring, always creating.",
+                "CodeChemist & Hackathon Winner x1 | Author | Developer | Entrepreneur Always exploring, always creating",
               "sameAs": [
-                "https://www.instagram.com/sayman._.here/",
-                "https://www.linkedin.com/in/sayman-lal-30ba65306/",
-                "https://github.com/Sayman7",
+                "https://www.instagram.com/worksofsayman/",
+                "https://www.linkedin.com/in/worksofsayman",
+                "https://github.com/worksofsayman",
               ],
               "birthPlace": {
                 "@type": "Place",
