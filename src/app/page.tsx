@@ -13,6 +13,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://worksofsayman.vercel.app/" />
         <meta property="og:image" content="https://worksofsayman.vercel.app/Sayman-Lal.jpg" />
+        <meta name="google-site-verification" content="GtDRX3ONvRXYgr6Gxfgy4zf1Cml79WpXWbHNIvIoTwE" />
         <link rel="canonical" href="https://worksofsayman.vercel.app/" />
 
         <script
