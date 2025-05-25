@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Sayman Lal - Portfolio</title>
+        <title>Sayman Lal | Portfolio</title>
         <meta name="description" content="CodeChemist & Hackathon Winner x1 Developer | Author | Entrepreneur Always exploring, always creating" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Sayman Lal" />
