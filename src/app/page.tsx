@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <Head>
         <title>Sayman Lal - Portfolio</title>
-        <meta name="description" content="Hello I am Sayman Lal, CodeChemist & Hackathon Winner x1 Developer | Author | Entrepreneur Always exploring, always creating" />
+        <meta name="description" content="CodeChemist & Hackathon Winner x1 Developer | Author | Entrepreneur Always exploring, always creating" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Sayman Lal" />
         <meta property="og:description" content="Author | Developer | Entrepreneur" />

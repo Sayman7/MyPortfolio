@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Sayman Lal - Portfolio",
   description:
-    "Hello I am Sayman Lal, CodeChemist & Hackathon Winner x1 Developer | Author | Entrepreneur Always exploring, always creating",
+    "CodeChemist & Hackathon Winner x1 Developer | Author | Entrepreneur Always exploring, always creating",
   metadataBase: new URL("https://worksofsayman.vercel.app"),
   alternates: {
     canonical: "/",
