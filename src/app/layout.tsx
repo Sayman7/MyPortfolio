@@ -13,15 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sayman Lal | Portfolio",
+  title: "Sayman Lal - Portfolio",
   description:
-    "Sayman Lal, CodeChemist & Hackathon Winner x 1  Developer | Author | Entrepreneur Always exploring, always creating",
+    "Hello I am Sayman Lal, CodeChemist & Hackathon Winner x1 Developer | Author | Entrepreneur Always exploring, always creating",
   metadataBase: new URL("https://worksofsayman.vercel.app"),
   alternates: {
     canonical: "/",
-  },
-  verification: {
-    google: "GtDRX3ONvRXYgr6Gxfgy4zf1Cml79WpXWbHNIvIoTwE",
   },
   openGraph: {
     title: "Sayman Lal",
@@ -61,33 +58,41 @@ export default function RootLayout({
               "name": "Sayman Lal",
               "url": "https://worksofsayman.vercel.app",
               "image": "https://worksofsayman.vercel.app/Sayman-Lal.jpg",
-              "jobTitle": "President",
+              "jobTitle": "Developer, Author, Entrepreneur",
               "worksFor": {
                 "@type": "Organization",
-                "name": "AIALCHEMIST",
+                "name": "AIALCHEMIST"
               },
               "alumniOf": {
                 "@type": "EducationalOrganization",
-                "name": "Gyan Ganga Institute of Technology and Sciences (GGITS), Batch AIML2028",
+                "name": "Gyan Ganga Institute of Technology and Sciences (GGITS), Batch AIML2028"
               },
-              "description":
-                "CodeChemist & Hackathon Winner x1 | Author | Developer | Entrepreneur Always exploring, always creating",
+              "description": "CodeChemist & Hackathon Winner x1 Developer | Author | Entrepreneur Always exploring, always creating",
               "sameAs": [
-                "https://www.instagram.com/worksofsayman/",
-                "https://www.linkedin.com/in/worksofsayman",
+                "https://www.wikidata.org/wiki/Q134550711",
                 "https://github.com/worksofsayman",
+                "https://instagram.com/worksofsayman",
+                "https://www.linkedin.com/in/worksofsayman",
+                "https://www.goodreads.com/author/show/56423682.Sayman_Lal",
+                "https://www.amazon.in/dp/B0F8D7PHL2"
               ],
               "birthPlace": {
                 "@type": "Place",
                 "name": "Jabalpur, Madhya Pradesh, India - 482001"
               },
+              "birthDate": "2007-01-07",
+              "knowsLanguage": ["English", "Hindi"],
               "knowsAbout": [
                 "Web Development",
                 "Hackathons",
                 "Startup Innovation",
                 "AI, Machine Learning, Web3, Blockchain, MERN Stack, AWS Cloud",
                 "Book & Article Writing"
-              ]
+              ],
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://worksofsayman.vercel.app/"
+              }
             }),
           }}
         />

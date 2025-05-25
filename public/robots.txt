@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://worksofsayman.vercel.app/
+Host: https://worksofsayman.vercel.app
 
 # Sitemaps
 Sitemap: https://worksofsayman.vercel.app/sitemap.xml
